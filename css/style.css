@@ -61,6 +61,17 @@ body {
     margin-top: 5px;
 }
 
+@media all and (max-width: 768px) {
+    .main-left {
+        width: 50px;
+    }
+    .main-left .nav-bar .logo,
+    .main-left .nav-bar .home,
+    .main-left .nav-bar .playlist,
+    .main-left .nav-bar .app {
+        display: none;
+    }
+}
 /* MAIN-RIGHT */
 .main-right {
     width: calc(100% - 150px);
@@ -112,8 +123,52 @@ body {
 
 
 /* MAIN-CONTENT */
-.main-right .main-content{
+.main-right .main-content {
     background-color: rgb(20, 25, 34);
+}
+.row-album {
+    display: flex;
+    margin: 20px 0;
+}
+.row-album .album {
+    width: calc(100% / 6 - 20px);
+    flex-shrink: 0;
+    height: 200px;
+    background-color: red;
+    margin: 0 10px;
+}
+
+@media all and (min-width: 992px) and (max-width: 1200px) {
+    #played .row-album{
+        flex-wrap: wrap;
+    }
+    #played .album{
+        width: calc(100% / 4 - 10px);
+        margin-bottom: 10px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+    #played .row-album{
+        flex-wrap: wrap;
+    }
+    #played .album{
+        width: calc(100% / 2 - 20px);
+        margin-bottom: 10px;
+    }
+}
+
+@media all and  (max-width: 768px) {
+    .main-right {
+        width: calc(100% - 50px);
+    }
+    #played .row-album{
+        flex-wrap: wrap;
+    }
+    #played .album{
+        width: calc(100% / 2 - 20px);
+        margin-bottom: 10px;
+    }
 }
 
 
