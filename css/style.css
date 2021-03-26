@@ -51,16 +51,38 @@ main {
     background-color:black;
 }
 
-
+/* NAV-TOP */
+/* LOGO */
 main .main-left .nav-top {
     height: calc(100% - 80px);
     background-color:skyblue;
+    padding:0 10px;
+    padding-top: 20px;
   }
-  
+  main .main-left .nav-top .nav-logo {
+      width: 60%;
+  }
+  main .main-left .nav-top .nav-logo img{
+      width: 100%;
+  }
   main .main-left .nav-top .nav-logo-mobile{
     display: none;
   }
+  /* HOME */
+  .main .main-left .home {
+      width:100%;
+  }
+  .main .main-left .home .img {
+      width: 20%;
+  }
+  .main .main-left .home .img img {
+     max-width: 50px;
+  }
   
+
+
+  
+  /* NAV-BOTTOM */
   main .main-left .nav-bottom {
     height: 80px;
     background-color: seashell;
@@ -133,6 +155,7 @@ main .main-left .nav-top {
 }
 .main-content  .row-album {
     display: flex;
+    flex-wrap: wrap;
     margin: 20px 0;
 }
 .main-content  .row-album .album {
@@ -205,6 +228,12 @@ footer #player {
     .main-right, .main-right .nav-up {
         width: calc(100% - 50px);
     }
+     #played .album,
+     #john .album,
+     #artisti .album {
+        width: calc(100% / 2 - 20px);
+    }
+
 }
 
 /* S */
