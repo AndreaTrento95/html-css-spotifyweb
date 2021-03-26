@@ -69,15 +69,42 @@ main .main-left .nav-top {
     display: none;
   }
   /* HOME */
-  .main .main-left .home {
-      width:100%;
+  #home {
+    padding: 10px 0 20px 0;
   }
-  .main .main-left .home .img {
-      width: 20%;
+  main .main-left .item  {
+     display: flex;
+     height: 20px;
+     align-items: center;
+     padding-top: 20px;
   }
-  .main .main-left .home .img img {
-     max-width: 50px;
+  main .main-left .item .img img {
+     width: 20px;
   }
+/* PLAYLIST */
+#playlist .box {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+#playlist .box .plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(163, 163, 163);
+}
+#playlist .box .plus .fal {
+    font-size: 2em;
+    color: black;
+}
+#playlist ul li {
+    list-style: none;
+    color: gray;
+    padding-top: 10px;
+}  
+
   
 
 
@@ -86,9 +113,23 @@ main .main-left .nav-top {
   main .main-left .nav-bottom {
     height: 80px;
     background-color: seashell;
+    padding:0 10px;
   }
-
-
+  .nav-bottom .app{
+      border-bottom: 1px solid gray;
+      padding: 5px 0;
+  }
+  .nav-bottom .app .circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid white;
+      background-color: black;
+  }
+  .nav-bottom .app .circle .far {
+      color: white;
+      
+  }
 
 /* MAIN-RIGHT */
 .main-right {
@@ -109,6 +150,7 @@ main .main-left .nav-top {
     background-color: rgba(0,0,0,0.4);
     line-height: 80px;
     vertical-align: middle;
+    z-index: 100;
 }
 .main-right .nav-up .button {
     width: 200px;
