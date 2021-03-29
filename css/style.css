@@ -32,11 +32,17 @@ body {
 .font-small{
     font-size: 0.8em;
 }
+.font-xs {
+    font-size: 0.7em;
+}
 .margin-top {
     margin-top: 10px;
 }
 .padding-left {
     padding-left: 10px;
+}
+.bg-gray {
+    background-color: gray;
 }
 /* MAIN */
 main {
@@ -55,7 +61,7 @@ main {
 /* LOGO */
 main .main-left .nav-top {
     height: calc(100% - 80px);
-    background-color:skyblue;
+    background-color:black;
     padding:0 10px;
     padding-top: 20px;
   }
@@ -82,6 +88,10 @@ main .main-left .nav-top {
      width: 20px;
   }
 /* PLAYLIST */
+#playlist {
+    height: 50%;
+    overflow: hidden;
+}
 #playlist .box {
     height: 30px;
     display: flex;
@@ -93,17 +103,25 @@ main .main-left .nav-top {
     align-items: center;
     width: 30px;
     height: 30px;
-    background-color: rgb(163, 163, 163);
+   
 }
-#playlist .box .plus .fal {
+#playlist .box .plus .far {
     font-size: 2em;
     color: black;
+    background-color: gray;
+}
+#playlist ul {
+    height: 70%;
 }
 #playlist ul li {
     list-style: none;
     color: gray;
-    padding-top: 10px;
+    padding-top: 5px;
+    overflow-y: auto;
 }  
+#playlist ul li a {
+    text-decoration: none;
+}
 
   
 
@@ -112,8 +130,8 @@ main .main-left .nav-top {
   /* NAV-BOTTOM */
   main .main-left .nav-bottom {
     height: 80px;
-    background-color: seashell;
     padding:0 10px;
+    background-color: black;
   }
   .nav-bottom .app{
       border-bottom: 1px solid gray;
@@ -128,7 +146,9 @@ main .main-left .nav-top {
   }
   .nav-bottom .app .circle .far {
       color: white;
-      
+  }
+  main .main-left .utente img {
+      width: 20px;
   }
 
 /* MAIN-RIGHT */
@@ -181,8 +201,10 @@ main .main-left .nav-top {
 }
 .main-right .nav-bottom a {
     text-decoration: none;
-    color: white;
+    color: gray;
     padding-right: 10px;
+    text-transform: uppercase;
+    font-size: 0.8em;
 }
 
 
@@ -237,6 +259,9 @@ main .main-left .nav-top {
 .row-album .album .img:hover .overlay {
     display: block;
 }
+#artisti .row-album .album .img img {
+    border-radius: 50%;
+}
 
 
 
@@ -253,6 +278,105 @@ footer #player {
     justify-content: space-between;
     align-items: center;
 }
+/* PLAYER-ALBUM */
+footer #player .player-album {
+    display: flex;
+    width: 230px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+footer #player .player-album .img {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer #player .player-album .img img {
+    width: 40px;
+    margin-right: 5px;
+}
+footer #player .player-album .icon .fa-tablet {
+    font-size: 1.2em;
+}
+footer #player .player-album .icon .fa-tablet,
+footer #player .player-album .icon .fa-heart {
+    color: lightslategray;
+}
+/* PLAYER-CONTROLLER */
+footer #player .player-controller {
+    width: calc(100% - 530px);
+}
+footer #player .player-controller .player-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer #player .player-controller .duration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+footer #player .player-controller .duration .duration-line {
+    width: 50%;
+    height: 4px;
+    background-color: lightslategray;
+    margin: 0 10px;
+}
+footer #player .player-controller .duration .duration-line .duration-line-inside {
+    position: relative;
+    width: 30%;
+    height: 4px;
+    background-color: cornsilk;
+}
+footer #player .circle {
+    display: none;
+    position: absolute;
+    right:-8%;
+    top: -90%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+}
+/* ICON */
+footer #player .player-controller .icon .far,
+footer #player .player-controller .icon .fas {
+    font-size: 1.1em;
+    margin: 0 10px;
+}
+footer #player .player-controller .icon .fa-play-circle {
+    font-size: 1.5em;
+    margin: 0 5px;
+}
+/* PLAYER-AUDIO */
+footer #player .player-audio {
+    width: 300px;
+    height: 90px;
+    line-height: 90px;
+    vertical-align: middle;
+}
+footer #player .player-audio .volume-bar {
+    display: inline-block;
+    width: 200px;
+    height: 4px;
+    background-color: lightslategray;
+    margin-bottom: 3px;
+}
+footer #player .player-audio .volume-bar .volume-inside-bar {
+    position: relative;
+    width: 50px;
+    height:4px;
+    background-color: cornsilk;
+}
+footer #player .volume-bar:hover .circle,
+footer #player .duration-line:hover .circle {
+    display: block;
+}
+
 
 
 /* MEDIA QUERY */
