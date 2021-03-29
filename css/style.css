@@ -44,6 +44,9 @@ body {
 .bg-gray {
     background-color: gray;
 }
+.margin-right {
+    margin-right: 5px;
+}
 /* MAIN */
 main {
     width: 100%;
@@ -96,6 +99,7 @@ main .main-left .nav-top {
     height: 30px;
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 #playlist .box .plus{
     display: flex;
@@ -104,9 +108,10 @@ main .main-left .nav-top {
     width: 30px;
     height: 30px;
     background-color: gray;
+    margin-right: 5px;
 }
 #playlist .box .plus .fa-plus {
-    font-size: 2em;
+    font-size: 1.4em;
     color: black;
 }
 #playlist ul {
@@ -128,26 +133,42 @@ main .main-left .nav-top {
     background-color: black;
   }
   .nav-bottom .app{
-      border-bottom: 1px solid gray;
-      padding: 5px 0;
+      display: flex;
+    border-bottom: 1px solid gray;
+    padding: 5px 0;
   }
   .nav-bottom .app .circle {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      border: 1px solid white;
-      background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: black;
+    margin-right: 5px;
   }
   .nav-bottom .app .circle .fa-arrow-down {
-      color: white;
+    color: white;
+    font-size: 0.3em;
+  }
+  .nav-bottom  .utente {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin-top: 5px;
   }
   main .main-left .utente img {
-      width: 20px;
-      height: 20px;
-      object-fit: cover;
-      border-radius: 50%;
-      background: gray;
-      color: white;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: gray;
+    color: white;
+    margin-right: 5px;
+  }
+  .nav-bottom  .utente span {
+    font-weight: bolder;
   }
 
 /* MAIN-RIGHT */
@@ -210,7 +231,7 @@ main .main-left .nav-top {
 /* MAIN-CONTENT */
 .main-right .main-content {
     background-color: rgb(20, 25, 34);
-    
+    overflow: hidden;
 }
 .main-content .row-title {
     margin-bottom: 20px;
@@ -261,10 +282,10 @@ main .main-left .nav-top {
 #artisti .row-album .album .img img {
     border-radius: 50%;
 }
-
-
-
-
+#artisti .album .overlay {
+    border-radius: 100%;
+    overflow: hidden;
+}
 
 /* FOOTER */
 footer {
@@ -312,6 +333,7 @@ footer #player .player-controller .player-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
 }
 footer #player .player-controller .duration {
     width: 100%;
@@ -382,15 +404,21 @@ footer #player .duration-line:hover .circle {
 /* MEDIA QUERY */
 /* XS */
 @media all and (max-width: 600px) {
+    /* MAIN-LEFT */
     main .main-left .nav-top .nav-logo-mobile{
         display:block;
     }
-    main .main-left .nav-top .nav-logo{
+    main .main-left .nav-bottom .app span:nth-child(2),
+    main .main-left .nav-bottom .utente span,
+    main .main-left #playlist,
+    main .main-left #home .item span,
+    main .main-left .nav-top .nav-logo {
         display: none;
     }
     main .main-left {
         width: 50px;
     }
+    /* MAIN-RIGHT */
     .main-right, .main-right .nav-up {
         width: calc(100% - 50px);
     }
@@ -399,13 +427,30 @@ footer #player .duration-line:hover .circle {
      #artisti .album {
         width: calc(100% / 2 - 20px);
     }
-
 }
 
 /* S */
-@media all and (min-width: 600px) and (max-width: 750) {
-    #played .album {
+@media all and (min-width: 600px) and (max-width: 750px) {
+    #played .album,
+    #john .album,
+    #artisti .album {
         width: calc(100% / 2 - 20px);
     }
 }
+/* M */
+@media all and (min-width: 750px) and (max-width: 900px) {
+    #played .album,
+    #john .album,
+    #artisti .album {
+        width: calc(100% / 4 - 20px);
+    }
+}
 
+
+/* GENERAL */
+.wrapper a{
+    text-decoration: none;
+}
+.wrapper a:hover {
+    color: white;
+}
