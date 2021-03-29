@@ -115,7 +115,7 @@ main .main-left .nav-top {
     color: black;
 }
 #playlist ul {
-    height: 70%;
+    height: 100%;
 }
 #playlist ul li {
     list-style: none;
