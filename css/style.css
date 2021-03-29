@@ -105,7 +105,7 @@ main .main-left .nav-top {
     height: 30px;
     background-color: gray;
 }
-#playlist .box .plus .far {
+#playlist .box .plus .fa-plus {
     font-size: 2em;
     color: black;
 }
@@ -121,11 +121,6 @@ main .main-left .nav-top {
 #playlist ul li a {
     text-decoration: none;
 }
-
-  
-
-
-  
   /* NAV-BOTTOM */
   main .main-left .nav-bottom {
     height: 80px;
@@ -143,7 +138,7 @@ main .main-left .nav-top {
       border: 1px solid white;
       background-color: black;
   }
-  .nav-bottom .app .circle .far {
+  .nav-bottom .app .circle .fa-arrow-down {
       color: white;
   }
   main .main-left .utente img {
