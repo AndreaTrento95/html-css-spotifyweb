@@ -103,12 +103,11 @@ main .main-left .nav-top {
     align-items: center;
     width: 30px;
     height: 30px;
-   
+    background-color: gray;
 }
 #playlist .box .plus .far {
     font-size: 2em;
     color: black;
-    background-color: gray;
 }
 #playlist ul {
     height: 70%;
@@ -149,6 +148,11 @@ main .main-left .nav-top {
   }
   main .main-left .utente img {
       width: 20px;
+      height: 20px;
+      object-fit: cover;
+      border-radius: 50%;
+      background: gray;
+      color: white;
   }
 
 /* MAIN-RIGHT */
@@ -262,6 +266,7 @@ main .main-left .nav-top {
 #artisti .row-album .album .img img {
     border-radius: 50%;
 }
+
 
 
 
